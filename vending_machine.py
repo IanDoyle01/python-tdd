@@ -1,20 +1,19 @@
 from byotest import *
 
+coins = [200, 100, 50, 20, 10, 5, 2, 1]
+
 def get_change(amount):
-    if amount == 0:
-        return []
-    
-    if amount in [200, 100, 50, 20, 10, 5, 2, 1]:   
-        return [amount]
     
     change = []
-    for coin in [200, 100, 50, 20, 10, 5, 2, 1]:
+    
+    for coin in coins:
         while coin <= amount:
             amount -= coin
             change.append(coin)
             
     return change
 
+#Tests
 test_are_equal(get_change(0),[])
 test_are_equal(get_change(1),[1])
 test_are_equal(get_change(2),[2])
