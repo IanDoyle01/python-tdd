@@ -13,5 +13,9 @@ def test_is_in(collection, item):
     assert item in collection, "{0} does not contain {1}".format(collection, item)
     
 #Test if item is not in collection
-def test_is_not_in(collection, item):
+def test_not_in(collection, item):
     assert item not in collection, "{0} does contain {1}".format(collection, item)
+    
+#Test if is within a range
+def test_between(n, x, y):
+    assert n >= x and n <= y, "{0} is greater than {2} or less than {1}".format(n, x, y)
