@@ -19,3 +19,14 @@ def test_not_in(collection, item):
 #Test if is within a range
 def test_between(n, x, y):
     assert n >= x and n <= y, "{0} is greater than {2} or less than {1}".format(n, x, y)
+    
+def test_exception_was_raised(func, args, message):
+    """
+    This test takes a function, arguments and a message as arguments. It can be
+    used to test if the exception is raised and the correct message is thrown.
+    """
+    try:
+        func(*args)
+        assert False, "Exception was not raised."
+    except Exception as e:
+        assert e.args[0] == message, "The message that was provided did not match the message thrown."
