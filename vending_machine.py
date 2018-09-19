@@ -1,4 +1,9 @@
-from byotest import *
+"""
+A script to determine the amount of change a vending machine
+should dispense. 
+"""
+
+from byotest import * #import custom tests
 
 usd_coins = {100:20, 50:20, 25:20, 10:20, 5:20, 1:20} #US Dollar Coin Denominations
 eur_coins = {200:20, 100:20, 50:20, 20:20, 10:20, 5:20, 2:20, 1:20} #Euro Coin Denominations
